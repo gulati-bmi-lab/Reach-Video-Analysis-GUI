@@ -7,11 +7,11 @@ selected_file = get(vid_fig_hand.listFiles_handle,'Value');
 vid_list = get(vid_fig_hand.listFiles_handle,'String');
 vid_name = vid_list{selected_file};
 vid_name_no = vid_name;
-vid_name_no = vid_name_no(end-4);
+vid_name_no = vid_name_no(end-4)
 if vid_name(end-5) ~= '-'
-    vid_name_no = strcat(vid_name(end-5), vid_name_no);
+    vid_name_no = strcat(vid_name(end-5), vid_name_n0)
     if vid_name(end-6) ~= '-'
-       vid_name_no = strcat(vid_name(end-6),vid_name(end-5), vid_name_no);
+       vid_name_no = strcat(vid_name(end-6),vid_name(end-5), vid_name_n0)
     end
 end
 
