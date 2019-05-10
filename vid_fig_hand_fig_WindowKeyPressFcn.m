@@ -30,7 +30,7 @@ end
 
 curr_frame = get(vid_fig_hand.frameEdithandle, 'String');
 
-if strcmp(eventdata.Key,'space')
+if strcmp(eventdata.Key,'r')
     if isempty(eventdata.Modifier)
         % do nothing
     elseif strcmp(eventdata.Modifier{:},'shift')
