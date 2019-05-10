@@ -7,7 +7,6 @@ selected_file = get(vid_fig_hand.listFiles_handle,'Value');
 vid_list = get(vid_fig_hand.listFiles_handle,'String');
 vid_name = vid_list{selected_file};
 set(vid_fig_hand.RowEditHd, 'String', str2double(vid_name(end-4)));
-set(vid_fig_hand.RowEditHdDOOROPEN, 'String', (1));
 set(vid_fig_hand.RowEditHdRCHONSET, 'String', (1));
 set(vid_fig_hand.RowEditHdTRLOUTCOME, 'String', (1));
 

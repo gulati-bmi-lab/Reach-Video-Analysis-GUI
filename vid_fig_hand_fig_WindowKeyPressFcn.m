@@ -30,15 +30,7 @@ end
 
 curr_frame = get(vid_fig_hand.frameEdithandle, 'String');
 
-if strcmp(eventdata.Key,'d')
-    if isempty(eventdata.Modifier)
-        % do nothing
-    elseif strcmp(eventdata.Modifier{:},'shift')
-        % call the callback
-        set(vid_fig_hand.RowEditHdDOOROPEN, 'String', curr_frame);   end
-end
-
-if strcmp(eventdata.Key,'r')
+if strcmp(eventdata.Key,'space')
     if isempty(eventdata.Modifier)
         % do nothing
     elseif strcmp(eventdata.Modifier{:},'shift')
