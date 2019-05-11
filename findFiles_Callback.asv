@@ -24,11 +24,10 @@ vid_date = [num2str(y),...
 
 indexed_by_date = contains(video_files_cellArr, vid_date);
 video_files_cellArr = video_files_cellArr(indexed_by_date);
-vid_index = [];
+vid_index = []'
 
 for filename = 1:length(video_files_cellArr)
-    vid_name_no = char(video_files_cellArr(filename));
-    vid_name = vid_name_no;
+    vid_name_no = video_files_cellArr(filename);
     vid_name_no = vid_name_no(end-4);
     if vid_name(end-5) ~= '-'
         vid_name_no = strcat(vid_name(end-5), vid_name_no);
@@ -36,15 +35,12 @@ for filename = 1:length(video_files_cellArr)
             vid_name_no = strcat(vid_name(end-6),vid_name(end-5), vid_name_no);
         end
     end
-   vid_index(filename) =  str2double(vid_name_no);
+    
 end
-[d, i] = sort(vid_index);
-clear d
-
 
 
 % update the listbox with the result
 set(vid_fig_hand.listFiles_handle,'Value',1); % Add this line so that the list can be changed
-set(vid_fig_hand.listFiles_handle,'String',video_files_cellArr(i))
+set(vid_fig_hand.listFiles_handle,'String',video_files_cellArr)
 
 end
