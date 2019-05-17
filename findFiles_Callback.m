@@ -26,6 +26,13 @@ indexed_by_date = contains(video_files_cellArr, vid_date);
 video_files_cellArr = video_files_cellArr(indexed_by_date);
 vid_index = [];
 
+% shortlisting by time
+vid_hr = get(vid_fig_hand.timeEditBoxHandle, 'String');
+if ~strcmp(vid_hr,'00h00m')
+    indexed_by_time = contains(video_files_cellArr, vid_hr);
+    video_files_cellArr = video_files_cellArr(indexed_by_time); 
+end
+
 for filename = 1:length(video_files_cellArr)
     vid_name_no = char(video_files_cellArr(filename));
     vid_name = vid_name_no;
